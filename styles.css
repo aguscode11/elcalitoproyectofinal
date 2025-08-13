@@ -27,7 +27,7 @@ img{ display:block; width:100%; height:auto }
 /* Utils */
 .container{ width:min(1150px, 92vw); margin-inline:auto; }
 .display{ font-family: "Playfair Display", serif; font-weight:700; font-size:clamp(28px, 5vw, 54px); line-height:1.08; margin:0 0 .4em }
-.lead{ color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); margin:0 0 12px }
+.lead{ color: rgb(231, 231, 231); font-size: clamp(16px, 2.2vw, 18px); margin:0 0 12px; font-weight: 500;}
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
   padding:.85rem 1.1rem; border-radius:14px; border:1px solid transparent;
@@ -52,6 +52,18 @@ img{ display:block; width:100%; height:auto }
 .btn-outline{ border-color:#CBD5E1; color: var(--ink); background:#fff }
 .btn-outline:hover{ border-color: var(--brand); color: var(--brand) }
 .small{ color:#8A99AA; font-size:12px; margin:0 }
+.botoncito {
+  background: linear-gradient(to right, #ff4d4d, #3b82f6);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-clip: border-box;   /* asegura que pinte hasta el borde */
+  color:#fff;
+  border:0;                      /* evita un filo “cortado” */
+  border-radius:14px;
+  display:inline-flex;           /* ya lo tenías, lo refuerzo */
+  align-items:center; justify-content:center;
+  padding:.85rem 1.1rem;
+ }
 
 /* ============ Header ============ */
 .header{
