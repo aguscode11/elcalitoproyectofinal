@@ -302,3 +302,10 @@ li {display: flex; flex-direction: row; gap: 10px; }
 .footer-brand img{ height:22px; width:auto }
 .footer .dot{ color:#E2E8F0; font-weight:700 }
 .footer p{ margin:0; color:#8A99AA }
+
+@media (max-width: 400px){
+  .footer{ flex-direction:column; text-align:center; gap:14px; }
+}
+.container.footer-inner{
+    display:flex; align-items:center; justify-content:center; gap:14px; padding:16px 0;
+}
