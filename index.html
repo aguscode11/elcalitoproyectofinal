@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lácteos Torretta & El Calito</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Desbloquear imágenes externas si tu hosting usa CSP:
+  <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: https://images.pexels.com https://maps.googleapis.com https://maps.gstatic.com;">
+  -->
+</head>
+
+<body>
+  <!-- ================= Header ================= -->
+  <header class="header">
+    <a href="#inicio" class="brand" aria-label="Inicio">
+      <span class="brand-logos">
+        <img src="imagenes/calito_logo.png" alt="El Calito" />
+        <span class="dot">•</span>
+        <img src="imagenes/torretta_logo.png" alt="Torretta" />
+      </span>
+      <span class="brand-text">Fábrica de Lácteos</span>
+    </a>
+
+    <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav" class="nav" aria-label="Principal" data-open="false">
+      <a href="#quienes" class="nav-link">Quiénes somos</a>
+      <a href="#catalogo" class="nav-link">Catálogo</a>
+      <a href="#sucursales" class="nav-link">Sucursales</a>
+      <a href="#contacto" class="btn btn-brand">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ================= Hero (slider con imágenes Pexels) ================= -->
+  <section id="inicio" class="hero">
+    <div class="slider" tabindex="0">
+      <!-- Quesos / tabla -->
+      <article id="slide1" class="slide">
+        <img class="slide-bg" src="https://images.pexels.com/photos/28572190/pexels-photo-28572190.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Tabla y selección de quesos">
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h1 class="display">
+            Hechos con <span class="milk">leche fresca</span>, pensados para tu mesa
+          </h1>
+          <p class="lead">Quesos, manteca, crema, ricotta y dulce de leche elaborados por una familia con oficio.</p>
+          <div class="cta">
+            <a href="#catalogo" class="btn btn-brand">Ver productos</a>
+            <a href="#quienes" class="btn btn-outline">Conocenos</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Elaboración / maduración -->
+      <article id="slide2" class="slide">
+        <img class="slide-bg" src="https://images.pexels.com/photos/6594972/pexels-photo-6594972.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Maduración de quesos en estanterías">
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h2 class="display">Calidad que rinde en cocina y mostrador</h2>
+          <p class="lead">Presentaciones pensadas para hogares, gastronomía y mayoristas.</p>
+          <div class="cta"><a href="#catalogo" class="btn btn-outline">Catálogo</a></div>
+        </div>
+      </article>
+
+      <!-- Origen / campo -->
+      <article id="slide3" class="slide">
+        <img class="slide-bg" src="https://images.pexels.com/photos/33110603/pexels-photo-33110603.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Vacas lecheras en pastura">
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h2 class="display">De Buenos Aires para toda la región</h2>
+          <p class="lead">Cadena de frío, stock estable y logística confiable.</p>
+          <div class="cta"><a href="#contacto" class="btn btn-brand">Hablemos</a></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="slider-dots">
+      <a href="#slide1" aria-label="Slide 1"></a>
+      <a href="#slide2" aria-label="Slide 2"></a>
+      <a href="#slide3" aria-label="Slide 3"></a>
+    </div>
+
+    <!-- Tira de productos -->
+    <div class="brand-strip container">
+      <img src="https://images.pexels.com/photos/10011796/pexels-photo-10011796.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Manteca en pan y cuchillo">
+      <img src="https://images.pexels.com/photos/7111471/pexels-photo-7111471.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Crema espesa en bowls">
+      <img src="https://images.pexels.com/photos/28944771/pexels-photo-28944771.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tarta con ricotta">
+      <img src="https://images.pexels.com/photos/28976235/pexels-photo-28976235.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Charcutería y quesos">
+      <img src="https://images.pexels.com/photos/15639799/pexels-photo-15639799.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Postre con caramelo">
+    </div>
+  </section>
+
+  <!-- ================= Quiénes Somos ================= -->
+  <section id="quienes" class="about container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <h2>Quiénes somos</h2>
+        <p>
+          Somos <strong>Torretta & El Calito</strong>, una fábrica familiar de la provincia de Buenos Aires.
+          Desde el tambo hasta la góndola, cuidamos la leche para transformarla en productos nobles,
+          con sabor parejo y rendimiento confiable.
+        </p>
+        <ul class="bullets">
+          <li> <div class="icono"> <img src="imagenes/cheese-wedge_1f9c0.png" alt="icono_queso"> </div> Maestros queseros con receta propia.</li>
+          <li> <div class="icono"> <img src="imagenes/cow_1f404.png" alt="icono_vaca"> </div> Leche seleccionada de productores locales.</li>
+          <li> <div class="icono"> <img src="imagenes/sad.png" alt="icono_camion"> </div> Cadena de frío y control de calidad por lote.</li>
+        </ul>
+
+        <div class="stats">
+          <div class="stat"><span class="num">+25</span><span class="label">Años</span></div>
+          <div class="stat"><span class="num">30+</span><span class="label">Presentaciones</span></div>
+          <div class="stat"><span class="num">2</span><span class="label">Sucursales</span></div>
+        </div>
+      </div>
+
+      <div class="about-photos">
+        <figure class="photo big">
+          <img src="https://images.pexels.com/photos/5953837/pexels-photo-5953837.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Fábrica y control de calidad">
+        </figure>
+        <figure class="photo mid">
+          <img src="https://images.pexels.com/photos/28976233/pexels-photo-28976233.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Proceso de elaboración">
+        </figure>
+        <figure class="photo small">
+          <img src="https://images.pexels.com/photos/32378657/pexels-photo-32378657.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Tambo y materia prima">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Catálogo ================= -->
+  <section id="catalogo" class="catalog">
+    <div class="container">
+      <div class="catalog-head">
+        <h2>Nuestros productos</h2>
+        <p>Elegí una categoría para ver presentaciones, pesos, EAN y opciones de empaque.</p>
+      </div>
+
+      <div class="catalog-grid">
+        <a class="cat-card" href="catalogo/quesos.html">
+          <img class="cat-bg" src="https://images.pexels.com/photos/6594972/pexels-photo-6594972.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Quesos">
+          <div class="overlay"></div>
+          <div class="body"><h3>Quesos</h3><span class="chip">Ver catálogo</span></div>
+        </a>
+
+        <a class="cat-card" href="catalogo/manteca.html">
+          <img class="cat-bg" src="https://images.pexels.com/photos/10011796/pexels-photo-10011796.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Manteca">
+          <div class="overlay"></div>
+          <div class="body"><h3>Manteca</h3><span class="chip">Ver catálogo</span></div>
+        </a>
+
+        <a class="cat-card" href="catalogo/crema.html">
+          <img class="cat-bg" src="https://images.pexels.com/photos/6166760/pexels-photo-6166760.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Crema de leche">
+          <div class="overlay"></div>
+          <div class="body"><h3>Crema de leche</h3><span class="chip">Ver catálogo</span></div>
+        </a>
+
+        <a class="cat-card" href="catalogo/ricotta.html">
+          <img class="cat-bg" src="https://images.pexels.com/photos/30649018/pexels-photo-30649018.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Ricotta / postres">
+          <div class="overlay"></div>
+          <div class="body"><h3>Ricotta</h3><span class="chip">Ver catálogo</span></div>
+        </a>
+
+        <a class="cat-card" href="catalogo/dulce-de-leche.html">
+          <img class="cat-bg" src="https://images.pexels.com/photos/28302508/pexels-photo-28302508.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dulce de leche / caramelo">
+          <div class="overlay"></div>
+          <div class="body"><h3>Dulce de leche</h3><span class="chip">Ver catálogo</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Galería (mosaico) ================= -->
+  <section class="gallery">
+    <div class="container">
+      <h2>En imágenes</h2>
+      <div class="masonry">
+        <img src="https://images.pexels.com/photos/28572190/pexels-photo-28572190.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Mesa de quesos">
+        <img src="https://images.pexels.com/photos/5953837/pexels-photo-5953837.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Cheesemaker / depósito">
+        <img src="https://images.pexels.com/photos/6594972/pexels-photo-6594972.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Ruedas en maduración">
+        <img src="https://images.pexels.com/photos/19805349/pexels-photo-19805349.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Queso y vino">
+        <img src="https://images.pexels.com/photos/33110603/pexels-photo-33110603.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Vacas en pastura">
+        <img src="https://images.pexels.com/photos/18823173/pexels-photo-18823173.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Campo y ganado">
+        <img src="https://images.pexels.com/photos/30325078/pexels-photo-30325078.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Pasta con ricotta">
+        <img src="https://images.pexels.com/photos/27098221/pexels-photo-27098221.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Vaca Holstein de cerca">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Sucursales ================= -->
+  <section id="sucursales" class="branches">
+    <div class="container">
+      <div class="branches-head">
+        <h2>¿Dónde estamos?</h2>
+        <p>Visitá nuestras sucursales o escribinos para mayoristas y distribuidores.</p>
+      </div>
+
+      <div class="branches-grid">
+        <article class="branch-card">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.818785942008!2d-60.69718522353172!3d-34.58345155642953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b8ddec51e63055%3A0x5cfb3da2b76749b3!2sEl%20Calito!5e0!3m2!1ses-419!2sar!4v1731104680795!5m2!1ses-419!2sar"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="branch-info">
+            <h3>O'Higgins</h3>
+            <p>B6748 O'Higgins, Provincia de Buenos Aires</p>
+          </div>
+        </article>
+
+        <article class="branch-card">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.003461912281!2d-60.95610632353187!3d-34.578778956182944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b8eb3536a55063%3A0xfce52e93a31ea536!2sEl%20Calito!5e0!3m2!1ses-419!2sar!4v1731027606519!5m2!1ses-419!2sar"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="branch-info">
+            <h3>Junín</h3>
+            <p>Tucumán 145, B6022 Junín, Provincia de Buenos Aires</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Contacto ================= -->
+  <section id="contacto" class="contact">
+    <div class="container contact-inner">
+      <div class="contact-art">
+        <img src="https://images.pexels.com/photos/0/pexels-photo-0.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Equipo atendiendo consultas" onerror="this.src='https://images.pexels.com/photos/5953837/pexels-photo-5953837.jpeg?auto=compress&cs=tinysrgb&w=1200'"/>
+        <!-- Nota: si esta URL placeholder 0 da 404, cae al fallback de arriba -->
+      </div>
+
+      <form class="form" action="send.php" method="POST" novalidate>
+        <h2>Contactanos</h2>
+        <p class="small">Pedidos, distribuidores, presupuestos o consultas.</p>
+
+        <div class="grid">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div>
+            <label for="apellido">Apellido</label>
+            <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required>
+          </div>
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+54 9 ...">
+          </div>
+        </div>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribí tu consulta..." required></textarea>
+
+        <div class="form-actions">
+          <button class="btn btn-brand" type="submit">Enviar</button>
+          <a class="btn btn-outline" href="tel:+5492364598066">Llamar</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= Footer ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="imagenes/calito_logo.png" alt="El Calito" />
+        <span class="dot">•</span>
+        <img src="imagenes/torretta_logo.png" alt="Torretta" />
+      </div>
+      <p>© Lácteos Torretta & El Calito · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navegación móvil
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    btn.addEventListener('click', ()=>{
+      const open = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', String(!open));
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.classList.toggle('is-open', !open);
+    });
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+      nav.setAttribute('data-open','false');
+      btn.setAttribute('aria-expanded','false');
+      btn.classList.remove('is-open');
+    }));
+  </script>
+</body>
+</html>
